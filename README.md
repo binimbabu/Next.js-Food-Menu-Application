@@ -154,3 +154,88 @@ Here in 'BlogPostPage' gets a props called 'params' (which is set by Nextjs) , '
 
 
 
+for 'http://localhost:3000/meals' we place 'app/meals' that has content in app/meals/page.js which is following
+
+app/meals/page.js
+
+export default function MealsPage() {
+  return (
+    <>
+      <h1>Meals Page</h1>
+    </>
+)
+}
+
+
+for 'http://localhost:3000/meals/share' we place 'app/meals/share' that has content in app/meals/share/page.js which is following 
+
+
+app/meals/share/page.js
+
+export default function ShareMealsPage() {
+  return (
+    <>
+      <h1>Meals Share Page</h1>
+    </>
+)
+}
+
+
+
+In 'app/community' for 'http://localhost:3000/community'
+
+
+app/community/page.js
+
+
+export default function CommunityPage() {
+  return (
+    <>
+      <h1>Community Page</h1>
+    </>
+)
+}
+
+
+
+
+
+app/page.js
+
+import Link from 'next/link';
+
+
+export default function Home() {
+  return (
+    <main>
+      <Header />  
+      <p><Link href="/community>Join community</Link></p> 
+      <p><Link href="/meals/share>Share meal</Link></p>  
+      <p><Link href="/meals>Explore meals</Link></p> 
+   </main>
+  );
+}
+
+
+
+For dynamic route for 'http://localhost:3000/meals/<anything>  'app/meals/[mealsSlug]' 
+
+
+app/meals/[mealsSlug]/page.js
+
+
+
+export default function MealsDetailsPage() {
+  return (
+    <>
+      <h1>Meals Details Page</h1>
+    </>
+)
+}
+
+
+
+
+
+
+
