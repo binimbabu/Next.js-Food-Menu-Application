@@ -236,6 +236,25 @@ export default function MealsDetailsPage() {
 
 
 
+To add a proper header, logo and navigation to this website we can provide in root layout.js (i.e app/layout.js ). Nested layouts can also be provided (for example if there is 'layout.js' inside 'app/meals/layout.js' this layout will be active for meals related pages, but this 'app/meals/layout.js' file be nested into the root layout.
+
+app/meals/layout.js
+
+export default function MealsLayout({children}) {
+  return (
+    <>
+      <p>MealsLayout</p>
+     {children}
+    </>
+)
+}
+
+
+Here when we give like below
+
+<MealsLayout>This content</MealsLayout>
+
+'This content' will be made available through the 'children' props in 'MealsLayout'. 'children' props in 'MealsLayout' will receive any nested layouts or pages.
 
 
 
